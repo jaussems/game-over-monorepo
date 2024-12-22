@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgoldenrodyellow;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__image {
+    height: 5rem;
+    width: 5rem;
+  }
+}
