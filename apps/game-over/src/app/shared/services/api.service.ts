@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RAWGames } from './api.interface';
+import { Game, RAWGames } from './api.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +16,10 @@ export class ApiService {
     return this._http.get<RAWGames>('https://gamemock.free.beeceptor.com/api/games', {
       params: { page: 1, size: 50 }
     });
+  }
+
+  getDetailsOfGame(id:number) {
+    return this._http.get<Game>(`https://gamemock.free.beeceptor.com/api/games/${id}`, {
+    })
   }
 }
