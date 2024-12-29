@@ -4,7 +4,7 @@ export interface RAWGames {
   count:                number;
   next:                 string;
   previous:             null;
-  results:              Result[];
+  results:              Game[];
   seo_title:            string;
   seo_description:      string;
   seo_keywords:         string;
@@ -36,7 +36,7 @@ export interface YearYear {
   nofollow: boolean;
 }
 
-export interface Result {
+export interface Game {
   id:                 number;
   slug:               string;
   name:               string;
@@ -45,6 +45,7 @@ export interface Result {
   background_image:   string;
   rating:             number;
   rating_top:         number;
+  description?:       string;
   ratings:            Rating[];
   ratings_count:      number;
   reviews_text_count: number;
