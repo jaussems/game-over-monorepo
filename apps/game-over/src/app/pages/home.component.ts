@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   private _router: Router = inject(Router);
   responseData = signal<RAWGames | null>(null);
   results =computed(() => this.responseData()?.results)
+  public selectedId = signal<number>(0);
 
   ngOnInit() {
     this.getGamesAPICall()
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
 
   navigateToGameById(id: number) {
     this._router.navigateByUrl('game-details/' + id);
+    this.selectedId.set(id);
   }
 
 }

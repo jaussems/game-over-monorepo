@@ -2,7 +2,10 @@
   <h1>Welcome to home</h1>
   <div>
     @for (result of results(); track result.id) {
-      <div class="game" (click)="navigateToGameById(result.id)" >
+      <div
+        class="game"
+        (click)="navigateToGameById(result.id)"
+        [style.view-transition-name]="result.id === selectedId() ? 'game__image' : 'none' " >
         <img class="game__image" src="{{result.background_image}}" />
         <p>{{ result.name }}</p>
       </div>
