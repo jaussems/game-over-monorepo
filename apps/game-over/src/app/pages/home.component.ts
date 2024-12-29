@@ -1,14 +1,16 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../shared/services/api.service';
 import { RAWGames } from '../shared/services/api.interface';
 import { Router } from '@angular/router';
+import { ViewtransitionDirective } from '../shared/directive/viewtransition.directive';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, ViewtransitionDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
   private _apiService: ApiService = inject(ApiService);
