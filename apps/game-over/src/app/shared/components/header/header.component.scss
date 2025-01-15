@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  height: 2rem ;
+  margin: 0;
+  padding: 1rem;
+  background: black;
+  color: white;
+  li {
+    list-style: none;
+  }
+  .nav {
+    .ol , ul{
+
+      padding-left: 0;
+      display: flex;
+      gap: .75rem;
+    }
+  }
+}
+
+.breadcrumb {
+  display: inline-block;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+.breadcrumb a::after {
+  display: inline-block;
+  color: white;
+  content: '>';
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
