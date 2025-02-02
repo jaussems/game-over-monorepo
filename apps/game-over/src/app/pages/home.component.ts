@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
+
   navigateToGameById(id: number) {
     this._router.navigateByUrl('game-details/' + id);
     this.selectedId.set(id);

@@ -12,17 +12,18 @@ export class ApiService {
 
   getAllGames() {
     // We mock for now, don't want to loose some credits ;)
-    return this._http.get<RAWGames>('https://gamemock2.free.beeceptor.com/api/games', {
+    return this._http.get<RAWGames>('http://localhost:3000/games', {
       params: { page: 1, size: 50 }
     });
   }
 
   getDetailsOfGame(id:number) {
-    return this._http.get<Game>(`https://gamemock2.free.beeceptor.com/api/games/${id}`, {
+    // return this._http.get<Game>(`https://gamemock3.free.beeceptor.com/api/games/${id}`, {
+    return this._http.get<Game>(`http://localhost:3000/game-details`, {
     })
   }
 
   getGenres() {
-    return this._http.get<Genres>("https://gamemock2.free.beeceptor.com/api/genres")
+    return this._http.get<Genres>("http://localhost:3000/genres")
   }
 }

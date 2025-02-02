@@ -1,0 +1,57 @@
+:host {
+  --background-color: black;
+  --animation-duration: 0.2s;
+  --animation-timing-cure: ease-in-out;
+}
+
+
+.sidemenu {
+  width: 0;
+  z-index: 999;
+  background: black;
+  position: absolute;
+  flex: 0 0 200px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  transition: width var(--animation-duration) var(--animation-timing-cure);
+  left: 0;
+  padding-left: 1rem;
+  
+  color: transparent;
+}
+
+.sidemenu.open {
+  width: 20rem;
+  color: wheat;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+
+
