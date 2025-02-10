@@ -1,0 +1,6 @@
+<div class="layout">
+  <app-header (clickedHeader)="openSideMenu()"></app-header>
+  <app-side-menu [hideMenu]="menuOpen()"></app-side-menu>
+  <ng-content></ng-content>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,6 @@
+<div class="sidemenu" [ngClass]="!hideMenu() ? 'open' : ''">
+
+@for(genre of genres(); track $index) {
+    <p (click)="navigateToGenrePage(genre.name)">{{genre.name}}</p>
+}
+</div>
