@@ -1,0 +1,16 @@
+<div class="genre">
+  <p>Genre</p>
+  <h1>{{genreId()}}</h1>
+  <div class="genre__games">
+    @for (result of results(); track result.id) {
+      <div
+        class="game"
+        (click)="navigateToGameById(result.id)"
+        appViewTransition="game__image"
+      >
+        <img class="game__image" src="{{result.background_image}}" />
+        <p>{{ result.name }}</p>
+      </div>
+    }
+  </div>
+</div>

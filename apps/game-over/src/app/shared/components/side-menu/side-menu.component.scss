@@ -17,14 +17,15 @@
   align-items: center;
   transition: width var(--animation-duration) var(--animation-timing-cure);
   left: 0;
-  padding-left: 1rem;
-  
+
+
   color: transparent;
 }
 
 .sidemenu.open {
   width: 20rem;
   color: wheat;
+  padding-left: 1rem;
 }
 
 

@@ -23,6 +23,10 @@ export class ApiService {
     })
   }
 
+  getGamesWithGenres(genre: string) {
+    return this._http.get<RAWGames>(`https://api.rawg.io/api/games?key=&genres=${genre}`, {})
+  }
+
   getGenres() {
     return this._http.get<Genres>("http://localhost:3000/genres")
   }
